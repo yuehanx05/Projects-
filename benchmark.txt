@@ -1,0 +1,137 @@
+
+For building a tree with 4 X 2 data frame, it takes 2.77 seconds. 
+
+For building a tree with 4 X 4 data frame, it takes 4.68 seconds. 	
+
+For building a tree with 13 X 5 data frame, it takes 16.63 seconds.
+
+For building a tree with 50 X 5 data frame, it takes 336.49 seconds, which is around 6 minutes.  
+
+For building a tree with 4 X 2 data frame, the profiling is 
+Tue Dec 10 22:05:05 2019    profile
+
+         525 function calls (521 primitive calls) in 0.030 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+       67    0.015    0.000    0.020    0.000 :0(execute)
+        2    0.004    0.002    0.020    0.010 sql_tree.py:110(best_split)
+      139    0.003    0.000    0.005    0.000 utf_8.py:15(decode)
+      5/1    0.002    0.000    0.029    0.029 sql_tree.py:15(__init__)
+      139    0.002    0.000    0.002    0.000 :0(utf_8_decode)
+       65    0.001    0.000    0.001    0.000 :0(fetchone)
+       56    0.001    0.000    0.001    0.000 :0(join)
+        1    0.000    0.000    0.030    0.030 :0(exec)
+        9    0.000    0.000    0.000    0.000 :0(min)
+        1    0.000    0.000    0.000    0.000 :0(setprofile)
+       11    0.000    0.000    0.000    0.000 :0(append)
+        2    0.000    0.000    0.000    0.000 :0(print)
+        1    0.000    0.000    0.030    0.030 profile:0(sql_tree.SQLTree(cur, 'test_data3', ['column_1'], 'response', Gini_index, []))
+        4    0.000    0.000    0.000    0.000 :0(max)
+        9    0.000    0.000    0.000    0.000 :0(copy)
+        1    0.000    0.000    0.029    0.029 <string>:1(<module>)
+        2    0.000    0.000    0.000    0.000 :0(fetchall)
+        4    0.000    0.000    0.000    0.000 :0(keys)
+        5    0.000    0.000    0.000    0.000 sql_tree.py:177(<lambda>)
+        2    0.000    0.000    0.000    0.000 sql_tree.py:179(<lambda>)
+        0    0.000             0.000          profile:0(profiler)
+
+
+For building a tree with 4 X 4 data set, the profiling is
+ 
+Tue Dec 10 22:05:08 2019    profile
+
+         1049 function calls (1045 primitive calls) in 0.059 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+      135    0.030    0.000    0.040    0.000 :0(execute)
+        2    0.010    0.005    0.049    0.025 sql_tree.py:110(best_split)
+      285    0.006    0.000    0.010    0.000 utf_8.py:15(decode)
+      285    0.004    0.000    0.004    0.000 :0(utf_8_decode)
+      129    0.003    0.000    0.003    0.000 :0(fetchone)
+      114    0.002    0.000    0.002    0.000 :0(join)
+      5/1    0.002    0.000    0.058    0.058 sql_tree.py:15(__init__)
+       21    0.001    0.000    0.001    0.000 :0(min)
+       22    0.000    0.000    0.000    0.000 :0(append)
+        8    0.000    0.000    0.000    0.000 :0(max)
+        1    0.000    0.000    0.058    0.058 :0(exec)
+        2    0.000    0.000    0.000    0.000 :0(print)
+        1    0.000    0.000    0.000    0.000 :0(setprofile)
+        9    0.000    0.000    0.000    0.000 :0(copy)
+        6    0.000    0.000    0.000    0.000 :0(fetchall)
+       12    0.000    0.000    0.000    0.000 sql_tree.py:177(<lambda>)
+        4    0.000    0.000    0.000    0.000 :0(keys)
+        1    0.000    0.000    0.059    0.059 profile:0(sql_tree.SQLTree(cur, 'test_data', ['column_1', 'column_2', 'column_3'], 'response', Gini_index, []))
+        6    0.000    0.000    0.000    0.000 sql_tree.py:179(<lambda>)
+        1    0.000    0.000    0.058    0.058 <string>:1(<module>)
+        0    0.000             0.000          profile:0(profiler)
+
+
+
+For building a tree with 13 X 5 data set, the profiling is 
+
+Tue Dec 10 22:05:17 2019    profile
+
+         3475 function calls (3473 primitive calls) in 0.184 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+      466    0.096    0.000    0.128    0.000 :0(execute)
+        2    0.034    0.017    0.180    0.090 sql_tree.py:110(best_split)
+      944    0.019    0.000    0.032    0.000 utf_8.py:15(decode)
+      944    0.013    0.000    0.013    0.000 :0(utf_8_decode)
+      458    0.009    0.000    0.009    0.000 :0(fetchone)
+      419    0.007    0.000    0.007    0.000 :0(join)
+       71    0.002    0.000    0.002    0.000 :0(min)
+       69    0.001    0.000    0.001    0.000 :0(append)
+       10    0.001    0.000    0.001    0.000 :0(max)
+      3/1    0.001    0.000    0.183    0.183 sql_tree.py:15(__init__)
+       59    0.000    0.000    0.000    0.000 sql_tree.py:177(<lambda>)
+        1    0.000    0.000    0.184    0.184 :0(exec)
+        8    0.000    0.000    0.000    0.000 :0(fetchall)
+        2    0.000    0.000    0.000    0.000 :0(print)
+        1    0.000    0.000    0.000    0.000 :0(setprofile)
+        1    0.000    0.000    0.183    0.183 <string>:1(<module>)
+        1    0.000    0.000    0.184    0.184 profile:0(sql_tree.SQLTree(cur, 'test_table', ['column_1', 'column_2', 'column_3', 'column_4'], 'response', Gini_index, []))
+        8    0.000    0.000    0.000    0.000 sql_tree.py:179(<lambda>)
+        3    0.000    0.000    0.000    0.000 :0(keys)
+        5    0.000    0.000    0.000    0.000 :0(copy)
+        0    0.000             0.000          profile:0(profiler)
+        
+For building a tree with 50 X 5 data set, the profiling is 
+
+Tue Dec 10 22:08:09 2019    profile
+
+         64490 function calls (64462 primitive calls) in 3.246 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+     8672    1.680    0.000    2.238    0.000 :0(execute)
+       16    0.620    0.039    3.196    0.200 sql_tree.py:110(best_split)
+    17460    0.326    0.000    0.557    0.000 utf_8.py:15(decode)
+    17460    0.231    0.000    0.231    0.000 :0(utf_8_decode)
+     8611    0.163    0.000    0.163    0.000 :0(fetchone)
+     8482    0.134    0.000    0.134    0.000 :0(join)
+     1630    0.050    0.000    0.050    0.000 :0(min)
+      958    0.013    0.000    0.013    0.000 :0(append)
+     29/1    0.010    0.000    3.246    3.246 sql_tree.py:15(__init__)
+       75    0.008    0.000    0.014    0.000 :0(max)
+      870    0.005    0.000    0.005    0.000 sql_tree.py:177(<lambda>)
+       61    0.002    0.000    0.002    0.000 :0(fetchall)
+       16    0.001    0.000    0.001    0.000 :0(print)
+       57    0.001    0.000    0.001    0.000 :0(copy)
+       60    0.000    0.000    0.000    0.000 sql_tree.py:179(<lambda>)
+       29    0.000    0.000    0.000    0.000 :0(keys)
+        1    0.000    0.000    3.246    3.246 :0(exec)
+        1    0.000    0.000    0.000    0.000 :0(setprofile)
+        1    0.000    0.000    3.246    3.246 profile:0(sql_tree.SQLTree(cur, 'test_bigger_table', ['column_1', 'column_2', 'column_3', 'column_4'], 'response', Gini_index, []))
+        1    0.000    0.000    3.246    3.246 <string>:1(<module>)
+        0    0.000             0.000          profile:0(profiler)
+
+
+
