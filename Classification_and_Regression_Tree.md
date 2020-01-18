@@ -1,7 +1,7 @@
 # Classification and Regression tree
 
 > Links
-[Classification tree data frame](https://github.com/36-750/assignments-yuehanx05/blob/aad238e08ebf57cda74d8ad678543d2c67c299e4/classification-tree/classification_tree.py)
+[Classification tree data frame](https://github.com/yuehanx05/Projects-/blob/master/classification_tree.py)
 [Classification tree sql dataset](https://github.com/36-750/assignments-yuehanx05/blob/aad238e08ebf57cda74d8ad678543d2c67c299e4/classification-tree/sql_tree.py)
 [Classification tree data frame test](https://github.com/36-750/assignments-yuehanx05/blob/aad238e08ebf57cda74d8ad678543d2c67c299e4/classification-tree/test_classification_tree.py)
 [Classification tree sql dataset test](https://github.com/36-750/assignments-yuehanx05/blob/aad238e08ebf57cda74d8ad678543d2c67c299e4/classification-tree/SQLtest.py)
