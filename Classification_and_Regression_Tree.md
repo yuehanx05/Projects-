@@ -5,9 +5,9 @@
 [Classification and Regression tree: having sql database as dataset](https://github.com/yuehanx05/Projects-/blob/master/sql_tree.py)
 [Classification and Regression tree test: data frame](https://github.com/yuehanx05/Projects-/blob/master/test_classification_tree.py)
 [Classification and Regression tree test: sql database](https://github.com/yuehanx05/Projects-/blob/master/SQLtest.py)
-[Classification tree benchmark code](https://github.com/36-750/assignments-yuehanx05/blob/aad238e08ebf57cda74d8ad678543d2c67c299e4/classification-tree/benchmark.py)
-[Classification tree profile code](https://github.com/36-750/assignments-yuehanx05/blob/aad238e08ebf57cda74d8ad678543d2c67c299e4/classification-tree/Profile_code.py)
-[Classification tree benchmark and profile results](https://github.com/36-750/assignments-yuehanx05/blob/aad238e08ebf57cda74d8ad678543d2c67c299e4/classification-tree/benchmark.txt)
+[Classification tree benchmark code](https://github.com/yuehanx05/Projects-/blob/master/benchmark.py)
+[Classification tree profile code](https://github.com/yuehanx05/Projects-/blob/master/Profile_code.py)
+[Classification tree benchmark and profile results](https://github.com/yuehanx05/Projects-/blob/master/benchmark.txt)
 
 > For classification_tree.py, using data frame to build and prune classification tree. Then, making random forest based on the tree that we built before. 
 
