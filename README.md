@@ -72,4 +72,7 @@ This init function takes in whole dataset, k, which is the number of variables t
 This prediction function takes in the user’s dataset and it would return a list that has all the predictions that we calculated through our tree. 
 
 > For sql_tree.py, it uses exactly the same algorithms as the classification_tree.py except some of the codes can only be applied to the SQL database rather than the data frame. One thing needs to notice is that sql_tree doesn’t have random forest nor the calculation of the minimum error alpha, which would be used in the prune function. Therefore, users need to identify their own minimum error alpha in order to prune the tree. 
+> For both test_classification_tree.py and SQLtest.py, they are unit tests for the classification_tree.py and sql_tree.py.
+> 
+
 
