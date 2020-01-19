@@ -11,6 +11,14 @@
 
 > For classification_tree.py, using data frame to build and prune classification tree. Then, making random forest based on the tree that we built before. 
 
+> For sql_tree.py, it uses exactly the same algorithms as the classification_tree.py except some of the codes can only be applied to the SQL database rather than the data frame. One thing that needs to notice is that sql_tree doesn’t have random forest nor the calculation of the minimum error alpha, which would be used in the prune function. Therefore, users need to identify their own minimum error alpha in order to prune the tree. 
+
+> For both test_classification_tree.py and SQLtest.py, they are unit tests for the classification_tree.py and sql_tree.py.
+
+> For benchmark.py, Profile_code.py, and benchmark.txt, they are measuring how fast the classification and regression tree code execute. They aim to find where the bottlenecks are and how to optimize them. 
+
+> We are going to introduce the use of functions in the following and all of the following functions are designed in the classification_tree.py
+
 > The following functions are in the Class Node
 
 ### def __init__(self.dataset. Impurity_function, past_split): 
@@ -27,7 +35,7 @@ max_impurity_reduction = impurity_center - prob_left * impurity_left - prob_righ
 
 ### def best_split(self, dataset, impurity_function):
 The best split function takes dataset and impurity function as inputs and would return the best split variable and split point for each node. 
-In order to find the best split variable and best split point for each node, this function would use the values returned by the impurity_reduction and the datasets returned by the get_data function. Each testing split variable and each split point would be corresponding with a impurity reduction value and for which split variable and split point who has the maximum impurity reduction would be the best split point and best split variable for that node. 
+In order to find the best split variable and best split point for each node, this function would use the values returned by the impurity_reduction and the datasets returned by the get_data function. Each testing split variable and each split point would be corresponding with an impurity reduction value and for which split variable and split point who has the maximum impurity reduction would be the best split point and best split variable for that node. 
 
 ### def get_data(self, split_variable, split_point, dataset):
 This get_data function inputs split variable, split point, and dataset and would return the sub dataset for left and right side nodes, which are also children nodes. 
@@ -55,7 +63,7 @@ The prune function takes in the dataset and impurity function. This function wou
 The cross_Validation takes in the whole dataset and impurity function. This function would return the minimum error alpha which would be used in the prune function to compare with the alpha star to decide whether we need to prune a tree or not. 
 
 ### def query_node(self, dataset)
-This query_node function takes the dataset and it aims for benchmark. Traverse through the tree and get the prediction. Each row of test_dataset will be compared with the split_variable's split point in order to decide which path, left or right, should go in order to get the predicted outcomes
+This query_node function takes the dataset and it aims for the benchmark. Traverse through the tree and get the prediction. Each row of test_dataset will be compared with the split_variable's split point in order to decide which path, left or right, should go in order to get the predicted outcomes
 
 > The following functions are in the Class tree_to_forest and it is a super function of Node Class. 
 ### __init__(self, whole_dataset, k, impurity_function):
@@ -64,17 +72,13 @@ This init function takes in the whole dataset, k, which is the number of variabl
 ### def best_split(self, dataset, impurity_function):
 This best split takes in dataset and impurity function and it would return the best split point and best split variable for each node. This function is similar to the best_split function in the Node class, however, it doesn’t use the whole dataset nor all the variables to choose the best split point and best split variable but rather use the k number oof variables that users defined and then a random sample dataset. 
 
-> The following function are included in the Class Forest 
+> The following functions are included in the Class Forest 
 ### __init__(self, whole_dataset, k, n_tree, impurity_function):
-This init function takes in whole dataset, k, which is the number of variables that users pick, n_tree, which is the number of trees that the users wish to have in the forest and the impurity function. This function would build a forest. 
+This init function takes in the whole dataset, k, which is the number of variables that users pick, n_tree, which is the number of trees that the users wish to have in the forest and the impurity function. This function would build a forest. 
 
 ### prediction(self, user_dataset):
 This prediction function takes in the user’s dataset and it would return a list that has all the predictions that we calculated through our tree. 
 
-> For sql_tree.py, it uses exactly the same algorithms as the classification_tree.py except some of the codes can only be applied to the SQL database rather than the data frame. One thing needs to notice is that sql_tree doesn’t have random forest nor the calculation of the minimum error alpha, which would be used in the prune function. Therefore, users need to identify their own minimum error alpha in order to prune the tree. 
 
-> For both test_classification_tree.py and SQLtest.py, they are unit tests for the classification_tree.py and sql_tree.py.
-
-> For benchmark.py, Profile_code.py, and benchmark.txt, they are measuring how fast the classification and regression tree code execute. They aim to find where the bottlenecks are and how to optimize them. 
 
 
